@@ -10,6 +10,12 @@ function doble(array) {
   //doble([1, 2, 3]) devuelve [2, 4, 6]
   // Tu código aca:
 
+    var newArray = [];
+    for(var i = 0; i < array.length; i++){
+        newArray.push(array[i] * 2)
+    }
+
+    return newArray;
 }
 
 // No modifiques nada debajo de esta linea //

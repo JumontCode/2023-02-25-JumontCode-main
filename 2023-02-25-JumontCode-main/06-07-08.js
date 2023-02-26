@@ -13,18 +13,23 @@ function crearClaseMascota() {
       // Inicializar las propiedades de la mascota con los valores recibidos como argumento
       // Tu código aca:
 
+      this.nombre = nombre;
+      this.dueño = dueño;
+      this.actividades = actividades;
     }
 
     getNombre() {
       // este método debe retornar el nombre de la mascota.
       // Tu código aca:
-
+      
+      return this.nombre;
     }
 
     getDueño() {
       // El método debe retornar nombre y apellido del dueño (concatenados).
       // Tu código aca:
-    
+
+      return this.dueño.nombre + ' ' + this.dueño.apellido;
     }
 
     addActividad(actividad, frecuencia) {
@@ -32,6 +37,8 @@ function crearClaseMascota() {
       // No debe retornar nada.
       // Tu código aca:
 
+      var objetoActividad = {actividad : actividad, frecuencia: frecuencia}
+      this.actividades.push(objetoActividad);
     }
 
     getActividades() {
@@ -41,6 +48,11 @@ function crearClaseMascota() {
       // mascotas.getActividades() debería devolver ['salir a caminar, 'baño']
       // Tu código aca:
      
+      var soloActividad = [];
+      for(var i = 0; i<this.actividades.length; i++){
+          soloActividad.push(this.actividades[i].actividad);
+      }
+      return soloActividad; 
     }
 
     getFrecuencia(actividad) {
@@ -50,6 +62,13 @@ function crearClaseMascota() {
       // mascotas.getFrecuencia('baño') debería devolver '1 vez al mes'
       // Tu código aca:
       
+      var frecuenciaActividad = '';
+      for(var i = 0; i<this.actividades.length; i++){
+        if(actividad === this.actividades[i].actividad){
+          frecuenciaActividad = this.actividades[i].frecuencia;
+        }
+      }
+      return frecuenciaActividad;
     }
   }
 

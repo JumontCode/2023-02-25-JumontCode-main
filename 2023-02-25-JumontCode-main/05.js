@@ -11,6 +11,8 @@ function loboEstaONoEsta(array) {
   // loboEstaONoEsta(['hola', 1, 3,  'palabra']) debe devolver false
   // ideas(['hola', 'buena', 'lobo', 4, 5, ]) debe devolver true
   // Tu código aca:
+
+  return array.includes('lobo');
 }
 
 // No modifiques nada debajo de esta linea //

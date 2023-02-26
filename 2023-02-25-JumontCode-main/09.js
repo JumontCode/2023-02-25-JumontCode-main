@@ -13,6 +13,12 @@ function pedirComida(array) {
   // retorna {standard: 2, vegan: 1}
   // Tu código aca:
 
+  var main = {standard:0,vegan:0}
+    for(var i = 0; i < array.length; i++){
+        if(array[i].dieta === 'standard'){main.standard += 1}
+        if(array[i].dieta === 'vegan'){main.vegan += 1}
+    }
+    return main;
 }
 
 // No modifiques nada debajo de esta linea //

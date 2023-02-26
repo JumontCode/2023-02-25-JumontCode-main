@@ -13,6 +13,15 @@ function fakeBinary2(string) {
   // fakeBinary("729") devuelve "101"
   // Tu código aca:
 
+
+  var string2 = '';
+  for(var i = 0; i < string.length; i++){
+    if(string[i] < '5'){
+        string2 += '0';
+      }
+      if(string[i] >= '5'){string2 += '1';}}
+
+      return string2;
 }
 
 // No modifiques nada debajo de esta linea //
